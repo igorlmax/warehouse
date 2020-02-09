@@ -1,0 +1,23 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "update to more secure php",
+      "attention": false,
+      "date": "05-01-2020",
+      "tech": "John Doe"
+    }
+  ],
+  "techs": [
+    {
+      "firstName": "Patrick",
+      "lastName": "Smith",
+      "id": 1
+    },
+    {
+      "firstName": "Perry",
+      "lastName": "Smith",
+      "id": 2
+    }
+  ]
+}
