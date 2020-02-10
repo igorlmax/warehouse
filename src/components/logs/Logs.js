@@ -24,7 +24,7 @@ const Logs = () => {
   }
 
   return (
-    <div className="container">
+    <div>
       <ul className="collection with-header">
         <li className="collection-header">
           <h4 className="center">System Logs</h4>
