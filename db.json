@@ -8,22 +8,31 @@
       "id": 4
     },
     {
-      "id": 6,
-      "message": "PHP to version7.5.3",
+      "id": 5,
+      "message": "PHP 3.4",
       "attention": true,
       "tech": "John Doe",
-      "date": "2020-02-11T15:07:22.273Z"
+      "date": "2020-02-11T19:37:03.500Z"
+    },
+    {
+      "id": 6,
+      "message": "MVC config log",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2020-02-11T19:38:11.820Z"
     }
   ],
   "techs": [
     {
       "firstName": "Patrick",
       "lastName": "Smith",
+      "position": "Software Developer",
       "id": 1
     },
     {
       "firstName": "Perry",
       "lastName": "Smith",
+      "position": "Project Manager",
       "id": 2
     }
   ]
