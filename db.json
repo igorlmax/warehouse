@@ -1,18 +1,18 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "update to more secure php",
-      "attention": false,
-      "date": "05-01-2020",
-      "tech": "John Doe"
+      "message": "improve JS",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2020-02-11T13:33:37.412Z",
+      "id": 4
     },
     {
-      "id": 2,
-      "message": "fix the login issue",
-      "attention": true,
-      "date": "14-02-2020",
-      "tech": "Brad Smith"
+      "message": "wegewg",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2020-02-11T13:35:04.709Z",
+      "id": 6
     }
   ],
   "techs": [
