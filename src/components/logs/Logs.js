@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from "react";
 import LogItem from "./LogItem";
 import Preloader from "../layout/Prelaoder";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import {getLogs} from "../../actions/logActions";
 
 // destructure logs and loading property from log store

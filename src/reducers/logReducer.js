@@ -1,11 +1,11 @@
 import {
-  GET_LOGS,
-  SET_LOADING,
-  LOGS_ERROR,
   ADD_LOG,
-  DELETE_LOG,
-  SET_CURRENT,
   CLEAR_CURRENT,
+  DELETE_LOG,
+  GET_LOGS,
+  LOGS_ERROR,
+  SET_CURRENT,
+  SET_LOADING,
   UPDATE_LOG
 } from "../actions/types";
 

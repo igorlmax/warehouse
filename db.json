@@ -34,6 +34,22 @@
       "lastName": "Smith",
       "position": "Project Manager",
       "id": 2
+    },
+    {
+      "firstName": "weg",
+      "lastName": "weg",
+      "id": 3
+    },
+    {
+      "firstName": "James",
+      "lastName": "Brown",
+      "id": 4
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Smith",
+      "position": "Tehnician",
+      "id": 5
     }
   ]
 }

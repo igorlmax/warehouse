@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import M from "materialize-css/dist/js/materialize.min";
+import { connect } from "react-redux";
+import { addStaff } from "../../actions/staffActions";
 
-const AddTechModal = () => {
+const AddTechModal = ({ addStaff }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [position, setPosition] = useState("");
 
   const onSubmit = () => {
     if (firstName === "" || lastName === "") {
       M.toast({ html: "Please enter the first and last name" });
     } else {
-      console.log(firstName, lastName);
+      const newStaff = {
+        firstName,
+        lastName,
+        position
+      };
+
+      addStaff(newStaff);
+      M.toast({ html: `New Staff added` });
 
       setFirstName("");
       setLastName("");
+      setPosition("");
     }
   };
 
@@ -38,10 +49,10 @@ const AddTechModal = () => {
         <div className="row">
           <div className="input-field">
             <input
-                type="text"
-                name="lastName"
-                value={lastName}
-                onChange={e => setLastName(e.target.value)}
+              type="text"
+              name="lastName"
+              value={lastName}
+              onChange={e => setLastName(e.target.value)}
             />
             <label htmlFor="firstName" className="active">
               Last Name
@@ -49,7 +60,19 @@ const AddTechModal = () => {
           </div>
         </div>
 
-
+        <div className="row">
+          <div className="input-field">
+            <input
+              type="text"
+              name="position"
+              value={position}
+              onChange={e => setPosition(e.target.value)}
+            />
+            <label htmlFor="position" className="active">
+              Position
+            </label>
+          </div>
+        </div>
       </div>
 
       <div className="modal-footer">
@@ -65,4 +88,4 @@ const AddTechModal = () => {
   );
 };
 
-export default AddTechModal;
+export default connect(null, { addStaff })(AddTechModal);

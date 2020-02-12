@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from "react";
 import TechItem from "./TechItem";
-import { connect } from "react-redux";
-import { getStaff } from "../../actions/staffActions";
+import {connect} from "react-redux";
+import {getStaff} from "../../actions/staffActions";
 
 const TechListModal = ({ staff: { staff }, getStaff }) => {
   useEffect(() => {
@@ -18,7 +18,6 @@ const TechListModal = ({ staff: { staff }, getStaff }) => {
   //   setLoading(false);
   // };
 
-  console.log(staff);
   return (
     <div id="tech-list-modal" className="modal">
       <div className="model-content">

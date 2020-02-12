@@ -1,4 +1,4 @@
-import { GET_STAFF } from "../actions/types";
+import {ADD_STAFF, GET_STAFF} from "../actions/types";
 
 const initialState = {
   staff: null
@@ -10,6 +10,11 @@ export default (state = initialState, action /*action consists of type and paylo
       return {
         ...state,
         staff: action.payload
+      };
+    case ADD_STAFF:
+      return {
+        ...state,
+        staff: [...state.staff, action.payload],
       };
 
     default:
