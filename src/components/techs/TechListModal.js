@@ -1,34 +1,39 @@
 import React, { useState, useEffect } from "react";
 import TechItem from "./TechItem";
+import { connect } from "react-redux";
+import { getStaff } from "../../actions/staffActions";
 
-const TechListModal = () => {
-  const [techs, setTechs] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+const TechListModal = ({ staff: { staff }, getStaff }) => {
   useEffect(() => {
-    getTechs();
+    getStaff();
   }, []);
 
-  const getTechs = async () => {
-    setLoading(true);
-    const res = await fetch("/techs");
-    const data = await res.json();
+  // const getTechs = async () => {
+  //   setLoading(true);
+  //
+  //   const res = await fetch("/techs");
+  //   const data = await res.json();
+  //
+  //   setTechs(data);
+  //   setLoading(false);
+  // };
 
-    setTechs(data);
-    setLoading(false);
-  };
-
+  console.log(staff);
   return (
     <div id="tech-list-modal" className="modal">
       <div className="model-content">
         <h4>Technician List</h4>
         <ul className="collection">
-          {!loading &&
-            techs.map(tech => <TechItem tech={tech} key={tech.id} />)}
+          {staff !== null &&
+            staff.map(tech => <TechItem tech={tech} key={tech.id} />)}
         </ul>
       </div>
     </div>
   );
 };
 
-export default TechListModal;
+const mapStateToProps = state => ({
+  staff: state.staff // this comes from combineReducers
+});
+
+export default connect(mapStateToProps, { getStaff })(TechListModal);

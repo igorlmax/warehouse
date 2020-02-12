@@ -4,7 +4,7 @@ const initialState = {
   staff: null
 };
 
-export default (state = initialState, action) => {
+export default (state = initialState, action /*action consists of type and payload, passed from the Action*/) => {
   switch (action.type) {
     case GET_STAFF:
       return {
