@@ -20,6 +20,13 @@
       "attention": false,
       "tech": "John Doe",
       "date": "2020-02-11T19:38:11.820Z"
+    },
+    {
+      "message": "wege",
+      "attention": false,
+      "tech": "false",
+      "date": "2020-02-12T18:13:38.218Z",
+      "id": 7
     }
   ],
   "techs": [
@@ -28,28 +35,6 @@
       "lastName": "Blue",
       "position": "Software Developer",
       "id": 1
-    },
-    {
-      "firstName": "Perry",
-      "lastName": "Smith",
-      "position": "Project Manager",
-      "id": 2
-    },
-    {
-      "firstName": "weg",
-      "lastName": "weg",
-      "id": 3
-    },
-    {
-      "firstName": "James",
-      "lastName": "Brown",
-      "id": 4
-    },
-    {
-      "firstName": "Joe",
-      "lastName": "Smith",
-      "position": "Tehnician",
-      "id": 5
     }
   ]
 }

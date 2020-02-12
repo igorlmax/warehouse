@@ -1,4 +1,4 @@
-import {ADD_STAFF, GET_STAFF} from "../actions/types";
+import {ADD_STAFF, DELETE_STAFF, GET_STAFF} from "../actions/types";
 
 const initialState = {
   staff: null
@@ -15,6 +15,12 @@ export default (state = initialState, action /*action consists of type and paylo
       return {
         ...state,
         staff: [...state.staff, action.payload],
+      };
+    case DELETE_STAFF:
+      return {
+        ...state,
+        staff: state.staff.filter(log => log.id !== action.payload),
+
       };
 
     default:

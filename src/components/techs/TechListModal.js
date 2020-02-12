@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import TechItem from "./TechItem";
-import {connect} from "react-redux";
-import {getStaff} from "../../actions/staffActions";
+import { connect } from "react-redux";
+import { getStaff } from "../../actions/staffActions";
 
 const TechListModal = ({ staff: { staff }, getStaff }) => {
   useEffect(() => {

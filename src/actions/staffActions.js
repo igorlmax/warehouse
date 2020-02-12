@@ -1,5 +1,4 @@
-import { ADD_LOG, ADD_STAFF, GET_STAFF, LOGS_ERROR } from "./types";
-import { setLoading } from "./logActions";
+import {ADD_STAFF, DELETE_STAFF, GET_STAFF} from "./types";
 
 // Get all Staff
 export const getStaff = () => async dispatch => {
@@ -14,7 +13,6 @@ export const getStaff = () => async dispatch => {
 
 // Add new Staff
 export const addStaff = staff => async dispatch => {
-
   const res = await fetch("/techs", {
     method: "POST",
     body: JSON.stringify(staff),
@@ -25,5 +23,17 @@ export const addStaff = staff => async dispatch => {
   dispatch({
     type: ADD_STAFF,
     payload: data
+  });
+};
+
+// Delete Staff
+export const deleteStaff = id => async dispatch => {
+  await fetch(`/techs/${id}`, {
+    method: "DELETE"
+  });
+
+  dispatch({
+    type: DELETE_STAFF,
+    payload: id
   });
 };
