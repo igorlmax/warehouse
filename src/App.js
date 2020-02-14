@@ -10,6 +10,7 @@ import AddTechModal from "./components/techs/AddTechModal";
 import TechListModal from "./components/techs/TechListModal";
 import {Provider} from "react-redux";
 import store from "./store";
+import Products from "./components/products/Products";
 
 const App = () => {
   useEffect(() => {
@@ -27,6 +28,8 @@ const App = () => {
           <AddTechModal />
           <TechListModal />
           <Logs />
+          <hr/>
+          <Products/>
         </div>
       </Fragment>
     </Provider>
