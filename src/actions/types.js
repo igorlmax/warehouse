@@ -8,5 +8,5 @@ export const CLEAR_CURRENT = "CLEAR_CURRENT";
 export const UPDATE_LOG = "UPDATE_LOG";
 export const GET_STAFF = "GET_STAFF";
 export const ADD_STAFF = "ADD_STAFF";
-export const DELETE_STAFF = "ADD_STAFF";
-export const GET_PRODUCTS = "ADD_STAFF";
+export const DELETE_STAFF = "DELETE_STAFF";
+export const GET_PRODUCTS = "GET_PRODUCTS";

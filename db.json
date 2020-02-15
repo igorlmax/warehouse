@@ -1,32 +1,18 @@
 {
   "logs": [
     {
-      "message": "improve JS",
+      "id": 4,
+      "message": "improve JS ES6",
       "attention": true,
       "tech": "John Doe",
-      "date": "2020-02-11T13:33:37.412Z",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "message": "PHP 3.4",
-      "attention": true,
-      "tech": "John Doe",
-      "date": "2020-02-11T19:37:03.500Z"
+      "date": "2020-02-14T22:46:13.009Z"
     },
     {
       "id": 6,
       "message": "MVC config log",
       "attention": false,
       "tech": "John Doe",
-      "date": "2020-02-11T19:38:11.820Z"
-    },
-    {
-      "message": "wege",
-      "attention": false,
-      "tech": "false",
-      "date": "2020-02-12T18:13:38.218Z",
-      "id": 7
+      "date": "2020-02-14T22:46:35.297Z"
     }
   ],
   "techs": [
@@ -37,15 +23,15 @@
       "id": 1
     },
     {
-      "firstName": "John",
-      "lastName": "Blue",
-      "position": "Software Developer",
+      "firstName": "tyk",
+      "lastName": "tyk",
+      "position": "tkyk",
       "id": 2
     }
   ],
   "products": [
     {
-      "id": 23523,
+      "id": 333,
       "name": "Bottle",
       "category": "Plastic",
       "price": 35,

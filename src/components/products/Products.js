@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getProducts } from "../../actions/productsAction";
-import TechItem from "../techs/TechItem";
+import ProductItem from "./ProductItem";
 
-const Products = ({ products, getProducts }) => {
+const Products = ({ products: { products }, getProducts }) => {
   useEffect(() => {
     getProducts();
   }, []);
-
+  console.log(products);
   return (
-    <table className="centered">
+    <table className="centered highlight">
       <thead>
         <tr>
           <th data-field="id">id</th>
@@ -22,31 +22,11 @@ const Products = ({ products, getProducts }) => {
       </thead>
 
       <tbody>
-        {products !== null &&
-          products.map(product => (
-            <tr>
-              <td>{product.id}</td>
-              <td>
-                <img
-                  className="responsive-img"
-                  width={"50px"}
-                  src={product.image}
-                />
-              </td>
-              <td>{product.id}</td>
-              <td>{product.category}</td>
-              <td>&#x24;{product.price}</td>
-              <td>
-                {product.quantity !== 0 ? (
-                  <span className="green-text">
-                    {product.quantity} in stock
-                  </span>
-                ) : (
-                  <span className="red-text">out of stock</span>
-                )}
-              </td>
-            </tr>
-          ))}
+        {products !== null && products.length !== 0 ? (
+          products.map(product => <ProductItem product={product} />)
+        ) : (
+          <span>'hi'</span>
+        )}
       </tbody>
     </table>
   );
@@ -54,7 +34,7 @@ const Products = ({ products, getProducts }) => {
 
 const mapStateToProps = state => ({
   // to new property products assign to products from combine reducer to products from initialState in the reducer
-  products: state.products.products
+  products: state.products
 });
 
 export default connect(mapStateToProps, { getProducts })(Products);
