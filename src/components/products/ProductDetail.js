@@ -4,17 +4,32 @@ import { getProducts } from "../../actions/productsAction";
 import { Link } from "react-router-dom";
 
 class ProductDetail extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.getProducts();
+  }
+
   render() {
-    console.log(this.props);
+    const { products } = this.props;
 
     const { params } = this.props.match;
+
     return (
       <div>
-        <h1>Users</h1>
-        <p>{params.id}</p>
+        {products !== null &&
+          products
+            .filter(singleProduct => singleProduct.id === 333)
+            .map(product => <span key={product.id}>{product.name}</span>)}
       </div>
     );
   }
 }
 
-export default ProductDetail;
+const mapStateToProps = state => ({
+  products: state.products.products
+});
+
+export default connect(mapStateToProps, { getProducts })(ProductDetail);

@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 const ProductItem = ({ product }) => {
   return (
     <tr key={product.id}>
       <td>{product.id}</td>
       <td>
-        <Link to="/product/333">
+        <Link to={{ pathname: `/product/${product.id}` }}>
           <img className="responsive-img" width={"50px"} src={product.image} />
         </Link>
       </td>
@@ -24,4 +25,4 @@ const ProductItem = ({ product }) => {
   );
 };
 
-export default ProductItem;
+export default connect(null, {})(ProductItem);

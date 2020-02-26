@@ -1,0 +1,12 @@
+https://codeburst.io/getting-started-with-react-router-5c978f70df91
+
+Display Single Product
+<tbody>
+        {products !== null && products.length !== 0 ? (
+          products
+            .filter(singleProduct => singleProduct.id === 333)
+            .map(product => <ProductItem key={product.id} product={product} />)
+        ) : (
+          <span>'hi'</span>
+
+https://www.printful.com/docs/warehouse-products

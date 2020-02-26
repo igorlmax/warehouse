@@ -7,7 +7,6 @@ const Products = ({ products: { products }, getProducts }) => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
   return (
     <table className="centered highlight">
       <thead>
@@ -22,10 +21,10 @@ const Products = ({ products: { products }, getProducts }) => {
       </thead>
 
       <tbody>
-        {products !== null && products.length !== 0 ? (
-          products.map(product => <ProductItem product={product} />)
-        ) : (
-          <span>'hi'</span>
+        {products !== null && products.length !== 0 && (
+          products.map(product => (
+            <ProductItem key={product.id} product={product} />
+          ))
         )}
       </tbody>
     </table>
