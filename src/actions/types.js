@@ -10,3 +10,4 @@ export const GET_STAFF = "GET_STAFF";
 export const ADD_STAFF = "ADD_STAFF";
 export const DELETE_STAFF = "DELETE_STAFF";
 export const GET_PRODUCTS = "GET_PRODUCTS";
+export const SEARCH_PRODUCT = "SEARCH_PRODUCT";

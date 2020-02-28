@@ -9,6 +9,7 @@ import EditLogModal from "./components/logs/EditLogModal";
 import AddTechModal from "./components/techs/AddTechModal";
 import TechListModal from "./components/techs/TechListModal";
 import Products from "./components/products/Products";
+import Supplier from "./components/suppliers/Supplier";
 
 const App = () => {
   useEffect(() => {
@@ -27,6 +28,8 @@ const App = () => {
         <Logs />
         <hr />
         <Products />
+        <hr />
+        <Supplier/>
       </div>
     </Fragment>
   );

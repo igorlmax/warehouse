@@ -1,5 +1,5 @@
 import React from "react";
-import { GET_PRODUCTS } from "../actions/types";
+import { GET_PRODUCTS, SEARCH_PRODUCT } from "../actions/types";
 
 const initialState = {
   products: null,
@@ -9,6 +9,11 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload
+      };
+    case SEARCH_PRODUCT:
       return {
         ...state,
         products: action.payload
