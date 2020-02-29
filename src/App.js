@@ -10,6 +10,7 @@ import AddTechModal from "./components/techs/AddTechModal";
 import TechListModal from "./components/techs/TechListModal";
 import Products from "./components/products/Products";
 import Supplier from "./components/suppliers/Supplier";
+import ExpenseTracker from "./components/expense-tracker/ExpenseTracker";
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const App = () => {
     <Fragment>
       <SearchBar />
       <div className="container">
+        <ExpenseTracker/>
         <AddBtn />
         <AddLogModal />
         <EditLogModal />
