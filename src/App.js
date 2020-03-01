@@ -21,7 +21,7 @@ const App = () => {
     <Fragment>
       <SearchBar />
       <div className="container">
-        <ExpenseTracker/>
+        <ExpenseTracker />
         <AddBtn />
         <AddLogModal />
         <EditLogModal />
@@ -31,7 +31,7 @@ const App = () => {
         <hr />
         <Products />
         <hr />
-        <Supplier/>
+        <Supplier />
       </div>
     </Fragment>
   );
