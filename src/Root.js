@@ -7,9 +7,11 @@ import ProductDetail from "./components/products/ProductDetail";
 import PageNotFound from "./components/PageNotFound";
 import React from "react";
 import Logs from "./components/logs/Logs";
+import SearchBar from "./components/layout/SearchBar";
 
 const Root = ({ store }) => (
   <Provider store={store}>
+    <SearchBar />
     <Router>
       <Switch>
         <Route exact path="/" component={App} />

@@ -19,7 +19,6 @@ const App = () => {
   });
   return (
     <Fragment>
-      <SearchBar />
       <div className="container">
         <ExpenseTracker />
         <AddBtn />
