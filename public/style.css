@@ -1,3 +1,7 @@
 .div-border {
     border-style: solid;
 }
+
+li.minus {
+    color: red;
+}
